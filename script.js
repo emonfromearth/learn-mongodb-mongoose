@@ -17,15 +17,15 @@ async function run() {
     const user = await User.create({
       name: "Emon Sabbir",
       age: 24,
-      email: "mail@omega.com",
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      email: "MAIL@omega.ac",
       hobbies: ["hobby1", "hobby2"],
       address: {
         street: "street1",
         city: "Dhaka",
       },
     });
+    user.createdAt = "2020-01-01";
+    user.save();
     console.log("User saved!", user);
   } catch (e) {
     console.log(e.message);
